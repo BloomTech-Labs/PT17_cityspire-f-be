@@ -56,10 +56,10 @@ https://documenter.getpostman.com/view/12494179/TW74jkQq
     - 8000
     - 8080
 - `DS_API_URL` - URL to a data science api. (eg. <https://ds-bw-test.herokuapp.com/>)
-- `DS_API_TOKEN` - authorization header token for data science api (eg. SUPERSECRET)
-- `DATABASE_URL` - connection string for postgres database
-- `OKTA_URL_ISSUER` - The complete issuer URL for verifying okta access tokens. `https://example.okta.com/oauth2/default`
-- `OKTA_CLIENT_ID` - the okta client ID.
+- `DS_API_TOKEN` - authorization header token for data science api (eg. SUPERSECRET) (DS_API_TOKEN=SUPERSECRET)
+- `DATABASE_URL` - connection string for postgres database (DATABASE_URL=postgres://docker:docker@127.0.0.1:5400/api-dev)
+- `OKTA_URL_ISSUER` - The complete issuer URL for verifying okta access tokens. `https://example.okta.com/oauth2/default`(OKTA_URL_ISSUER=https://auth.lambdalabs.dev/oauth2/default)
+- `OKTA_CLIENT_ID` - the okta client ID. (OKTA_CLIENT_ID=0oa18is3355KlyP5C4x7)
 
 See `.env` file for example values
 

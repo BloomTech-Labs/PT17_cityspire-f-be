@@ -52,7 +52,6 @@ app.use(cookieParser());
 app.use('/', indexRouter);
 app.use(['/city', '/cities'], cityRouter);
 app.use(['/profile', '/profiles'], profileRouter);
-
 app.use('/data', dsRouter);
 
 // catch 404 and forward to error handler
