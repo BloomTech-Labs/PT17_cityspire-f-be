@@ -1,4 +1,4 @@
-const { increment } = require("../db-config");
+// const { increment } = require("../db-config");
 
 exports.up = (knex) => {
   return knex.schema
@@ -23,17 +23,17 @@ exports.up = (knex) => {
       table.float('livability');
       table.float('latitude');
       table.float('longitude');
-      table.string('profile_id')
-      .unsigned()
-      .notNullable()
-      .references('id')
-      .inTable('profiles')
-      .onUpdate('CASCADE')
-      .onDelete('CASCADE');     
-    })
+      table
+        .string('profile_id')
+        .unsigned()
+        .notNullable()
+        .references('id')
+        .inTable('profiles')
+        .onDelete('CASCADE')
+        .onUpdate('CASCADE');
+    });
 };
 
 exports.down = (knex) => {
-  return knex.schema
-  .dropTableIfExists('cities').dropTableIfExists('profiles');
+  return knex.schema.dropTableIfExists('cities').dropTableIfExists('profiles');
 };
