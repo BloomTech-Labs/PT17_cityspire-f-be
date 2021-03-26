@@ -30,7 +30,7 @@ router.get('/:id', function (req, res) {
     });
 });
 
-router.get('/:id/city', (req, res) => {
+router.get('/:id/savedCity', (req, res) => {
   const { id } = req.params;
   Profiles.findCities(id)
     .then((city) => {
@@ -117,7 +117,7 @@ router.delete('/:id', function (req, res) {
   }
 });
 
-router.post('/:id/city', async (req, res) => {
+router.post('/:id/savedCity', async (req, res) => {
   const city = req.body;
   city.profile_id = req.params.id;
 
@@ -130,7 +130,7 @@ router.post('/:id/city', async (req, res) => {
   }
 });
 
-router.delete('/:id/city/:city_id', async (req, res, next) => {
+router.delete('/:id/savedCity/:city_id', async (req, res, next) => {
   const { city_id } = req.params;
 
   const city = Cities.findById(city_id);
