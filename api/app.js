@@ -22,6 +22,7 @@ const swaggerUIOptions = {
 const indexRouter = require('./index/indexRouter');
 const cityRouter = require('./city/cityRouter');
 const profileRouter = require('./profile/profileRouter');
+//const savedCitiesRouter = require('./savedCities/savedCitiesRouter');
 const dsRouter = require('./dsService/dsRouter');
 
 const app = express();
@@ -52,6 +53,7 @@ app.use(cookieParser());
 app.use('/', indexRouter);
 app.use(['/city', '/cities'], cityRouter);
 app.use(['/profile', '/profiles'], profileRouter);
+//app.use(['/profiles/:id/savedCities', '/profile/:id/savedCity'], savedCitiesRouter);
 
 app.use('/data', dsRouter);
 
