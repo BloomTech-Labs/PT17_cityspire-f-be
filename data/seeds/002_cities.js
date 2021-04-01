@@ -49,7 +49,6 @@ exports.seed = function (knex) {
           livability: '75',
           profile_id: '00ulthapbErVUwVJy4x6',
         },
-
       ]);
     });
 };
