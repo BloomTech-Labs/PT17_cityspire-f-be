@@ -15,7 +15,6 @@ exports.seed = function (knex) {
           livability: '85',
           profile_id: '00ulthapbErVUwVJy4x6',
         },
-
         {
           city: 'Atlanta',
           state: 'Georgia',
@@ -27,7 +26,6 @@ exports.seed = function (knex) {
           livability: '85',
           profile_id: '00ulthapbErVUwVJy4x6',
         },
-
         {
           city: 'Rancho Cucamonga',
           state: 'California',
@@ -39,7 +37,6 @@ exports.seed = function (knex) {
           livability: '85',
           profile_id: '00ulthapbErVUwVJy4x6',
         },
-
         {
           city: 'La Jolla',
           state: 'California',
@@ -60,9 +57,8 @@ exports.seed = function (knex) {
           diversity_index: '64',
           walkability: '44',
           livability: '87',
-          profile_id: 'k43c1w9h0g5q5aoah0x4',
+          profile_id: '00ulthapbErVUwVJy4x6',
         },
-        
         {
           city: 'Austin',
           state: 'Texas',
@@ -72,9 +68,8 @@ exports.seed = function (knex) {
           diversity_index: '56',
           walkability: '66',
           livability: '87',
-          profile_id: 'k43c1w9h0g5q5aoah0x4',
+          profile_id: '00ulthapbErVUwVJy4x6',
         },
-        
         {
           city: 'Des Moine',
           state: 'Iowa',
@@ -84,7 +79,7 @@ exports.seed = function (knex) {
           diversity_index: '52',
           walkability: '10',
           livability: '90',
-          profile_id: 'k43c1w9h0g5q5aoah0x4',
+          profile_id: '00ulthapbErVUwVJy4x6',
         },
       ]);
     });
