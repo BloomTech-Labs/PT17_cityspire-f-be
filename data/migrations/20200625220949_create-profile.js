@@ -58,57 +58,55 @@ exports.up = (knex) => {
       table.string('rec5');
       table.string('rec6');
     })
-  .createTable('schools', function (table) {
-    table.increments();
-    table.string('city');
-    table.string('state');
-    table.string('schoolName')
-    table.float('schoolScore')
-    table.float('numberOfStudents')
-  })
-  .createTable('weather', function(table) {
-    table.increments();
-    table.string('city');
-    table.string('state');
-    table.string('numberOfSunnyDays');
-    table.float('avgLow');
-    table.float('avgHigh');
-  })
-  .createTable('jobs', function(table) {
-    table.increments();
-    table.string('city');
-    table.string('state');
-    table.string('unemploymentRate');
-    table.string('medianSalary');
-    table.string('largestSector');
-  })
-  .createTable('rentalPrices', function(table) {
-    table.increments();
-    table.string('city');
-    table.string('state');
-    table.string('avgRentalPrice');
-    table.string('populationDensity')
-    table.string('colIndex')
-  })
-  .createTable('safestCities', function(table) {
-    table.increments();
-    table.string('city');
-    table.string('state');
-    table.string('homeSafety');
-    table.string('naturalDisasterRisk');
-    table.string('financialSafety');
-  })
-  .createTable('dangerousCities', function(table) {
-    table.increments();
-    table.string('city');
-    table.string('state');
-    table.string('crimeRate'),
-    table.string('chance'),
-    table.string('murders')
-  })
+    .createTable('schools', function (table) {
+      table.increments();
+      table.string('city');
+      table.string('state');
+      table.string('schoolName');
+      table.float('schoolScore');
+      table.float('numberOfStudents');
+    })
+    .createTable('weather', function (table) {
+      table.increments();
+      table.string('city');
+      table.string('state');
+      table.string('numberOfSunnyDays');
+      table.float('avgLow');
+      table.float('avgHigh');
+    })
+    .createTable('jobs', function (table) {
+      table.increments();
+      table.string('city');
+      table.string('state');
+      table.string('unemploymentRate');
+      table.string('medianSalary');
+      table.string('largestSector');
+    })
+    .createTable('rentalPrices', function (table) {
+      table.increments();
+      table.string('city');
+      table.string('state');
+      table.string('avgRentalPrice');
+      table.string('populationDensity');
+      table.string('colIndex');
+    })
+    .createTable('safestCities', function (table) {
+      table.increments();
+      table.string('city');
+      table.string('state');
+      table.string('homeSafety');
+      table.string('naturalDisasterRisk');
+      table.string('financialSafety');
+    })
+    .createTable('dangerousCities', function (table) {
+      table.increments();
+      table.string('city');
+      table.string('state');
+      table.string('crimeRate');
+      table.string('chance');
+      table.string('murders');
+    });
 };
-
-
 
 exports.down = (knex) => {
   return knex.schema.dropTableIfExists('cities').dropTableIfExists('profiles');
