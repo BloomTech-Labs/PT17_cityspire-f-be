@@ -14,15 +14,21 @@ exports.up = (knex) => {
       table.increments();
       table.string('city');
       table.string('state');
-      table.float('diversity_index');
       table.float('population');
-      table.float('rental_price');
-      table.string('crime');
-      table.string('air_quality_index');
-      table.float('walkability');
-      table.float('livability');
       table.float('latitude');
       table.float('longitude');
+      table.float('schoolScore');
+      table.string('numberOfSunnyDays');
+      table.float('unemploymentRate');
+      table.float('avgRentalPrice');
+      table.float('safetyRanking');
+      table.string('dangerousRanking');
+      table.string('rec1');
+      table.string('rec2');
+      table.string('rec3');
+      table.string('rec4');
+      table.string('rec5');
+      table.string('rec6');
       table
         .string('profile_id')
         .unsigned()
@@ -31,8 +37,78 @@ exports.up = (knex) => {
         .inTable('profiles')
         .onDelete('CASCADE')
         .onUpdate('CASCADE');
-    });
+    })
+    .createTable('citySearch', function (table) {
+      table.increments();
+      table.string('city');
+      table.string('state');
+      table.string('population');
+      table.string('latitude');
+      table.string('longitude');
+      table.string('schoolScore');
+      table.string('numberOfSunnyDays');
+      table.string('unemploymentRate');
+      table.string('avgRentalPrice');
+      table.string('safetyRanking');
+      table.string('dangerousRanking');
+      table.string('rec1');
+      table.string('rec2');
+      table.string('rec3');
+      table.string('rec4');
+      table.string('rec5');
+      table.string('rec6');
+    })
+  .createTable('schools', function (table) {
+    table.increments();
+    table.string('city');
+    table.string('state');
+    table.string('schoolName')
+    table.float('schoolScore')
+    table.float('numberOfStudents')
+  })
+  .createTable('weather', function(table) {
+    table.increments();
+    table.string('city');
+    table.string('state');
+    table.string('numberOfSunnyDays');
+    table.float('avgLow');
+    table.float('avgHigh');
+  })
+  .createTable('jobs', function(table) {
+    table.increments();
+    table.string('city');
+    table.string('state');
+    table.string('unemploymentRate');
+    table.string('medianSalary');
+    table.string('largestSector');
+  })
+  .createTable('rentalPrices', function(table) {
+    table.increments();
+    table.string('city');
+    table.string('state');
+    table.string('avgRentalPrice');
+    table.string('populationDensity')
+    table.string('colIndex')
+  })
+  .createTable('safestCities', function(table) {
+    table.increments();
+    table.string('city');
+    table.string('state');
+    table.string('homeSafety');
+    table.string('naturalDisasterRisk');
+    table.string('financialSafety');
+  })
+  .createTable('dangerousCities', function(table) {
+    table.increments();
+    table.string('city');
+    table.string('state');
+    table.string('crimeRate'),
+    table.string('chance'),
+    table.string('murders')
+  })
 };
+
+
 
 exports.down = (knex) => {
   return knex.schema.dropTableIfExists('cities').dropTableIfExists('profiles');
