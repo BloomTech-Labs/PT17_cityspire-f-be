@@ -22,7 +22,15 @@ const swaggerUIOptions = {
 const indexRouter = require('./index/indexRouter');
 const cityRouter = require('./city/cityRouter');
 const profileRouter = require('./profile/profileRouter');
+const schoolsRouter = require('./schools/schoolsRouter');
+const weatherRouter = require('./weather/weatherRouter');
+const jobsRouter = require('./jobs/jobsRouter');
+const citySearchRouter = require('./citySearch/citySearchRouter');
 //const savedCitiesRouter = require('./savedCities/savedCitiesRouter');
+const safestCityRouter = require('./safestCities/safestCitiesRouter');
+const dangerousCityRouter = require('./dangerousCities/dangerousCitiesRouter');
+const rentRouter = require('./rent/rentRouter');
+
 const dsRouter = require('./dsService/dsRouter');
 
 const app = express();
@@ -54,6 +62,13 @@ app.use('/', indexRouter);
 app.use(['/city', '/cities'], cityRouter);
 app.use(['/profile', '/profiles'], profileRouter);
 //app.use(['/profiles/:id/savedCities', '/profile/:id/savedCity'], savedCitiesRouter);
+app.use(['/safestCities'], safestCityRouter);
+app.use(['/dangerousCities'], dangerousCityRouter);
+app.use(['/rent'], rentRouter);
+app.use(['/school', '/schools'], schoolsRouter);
+app.use(['/weather'], weatherRouter);
+app.use(['/job', '/jobs'], jobsRouter);
+app.use(['/citySearch'], citySearchRouter);
 
 app.use('/data', dsRouter);
 
