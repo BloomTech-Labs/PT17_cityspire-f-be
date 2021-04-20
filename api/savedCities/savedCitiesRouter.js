@@ -1,9 +1,9 @@
 const express = require('express');
 // const authRequired = require('../middleware/authRequired');
-const SafestCities = require('./savedCitiesModel');
+const SavedCities = require('./savedCitiesModel');
 const router = express.Router();
 router.get('/', function (req, res) {
-  SafestCities.findAll()
+  SavedCities.findAll()
     .then((city) => {
       res.status(200).json(city);
     })
@@ -14,7 +14,7 @@ router.get('/', function (req, res) {
 });
 router.get('/:id', function (req, res) {
   const id = String(req.params.id);
-  SafestCities.findById(id)
+  SavedCities.findById(id)
     .then((city) => {
       if (city) {
         res.status(200).json(city);
