@@ -47,15 +47,21 @@ const findCities = async (id) => {
       'cities.id',
       'city',
       'state',
-      'diversity_index',
       'population',
-      'rental_price',
-      'crime',
-      'air_quality_index',
-      'livability',
-      'walkability',
       'latitude',
-      'longitude'
+      'longitude',
+      'schoolScore',
+      'numberOfSunnyDays',
+      'unemploymentRate',
+      'avgRentalPrice',
+      'safetyRanking',
+      'dangerousRanking',
+      'rec1',
+      'rec2',
+      'rec3',
+      'rec4',
+      'rec5',
+      'rec6'
     );
 };
 
@@ -65,7 +71,10 @@ const deleteCity = async (id) => {
     .join('cities', 'cities.profile_id', 'profiles.id')
     .del();
 };
-
+async function add(city) {
+  const [id] = await db('cities').insert(city, 'id');
+  return db('cities').where({ id }).first();
+}
 module.exports = {
   findAll,
   findBy,
@@ -76,4 +85,5 @@ module.exports = {
   findOrCreateProfile,
   findCities,
   deleteCity,
+  add,
 };
