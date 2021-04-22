@@ -483,7 +483,7 @@ exports.seed = function (knex) {
           rec3: 'Houston',
           rec4: 'Phoenix',
           rec5: 'Philadelphia',
-          rec6: 'San Antonio',
+          rec6: 'San-Antonio',
         },
         {
           id: '25',
@@ -503,7 +503,7 @@ exports.seed = function (knex) {
           rec3: 'Los-Angeles',
           rec4: 'Phoenix',
           rec5: 'Philadelphia',
-          rec6: 'San Antonio',
+          rec6: 'San-Antonio',
         },
         {
           id: '26',
@@ -523,7 +523,7 @@ exports.seed = function (knex) {
           rec3: 'Los-Angeles',
           rec4: 'Houston',
           rec5: 'Philadelphia',
-          rec6: 'San Antonio',
+          rec6: 'San-Antonio',
         },
         {
           id: '27',
@@ -543,7 +543,7 @@ exports.seed = function (knex) {
           rec3: 'Los-Angeles',
           rec4: 'Houston',
           rec5: 'Phoenix',
-          rec6: 'San Antonio',
+          rec6: 'San-Antonio',
         },
         {
           id: '28',
@@ -658,7 +658,7 @@ exports.seed = function (knex) {
           avgRentalPrice: '1133',
           safetyRanking: '4.3',
           dangerousRanking: '4.3',
-          rec1: 'South Burlington',
+          rec1: 'South-Burlington',
           rec2: 'Plano',
           rec3: 'Nashua',
           rec4: 'Lewiston',
@@ -718,12 +718,12 @@ exports.seed = function (knex) {
           avgRentalPrice: '1105',
           safetyRanking: '178',
           dangerousRanking: '1.1',
-          rec1: 'St. Louis',
+          rec1: 'St.-Louis',
           rec2: 'Memphis',
           rec3: 'Baltimore',
           rec4: 'Danville',
           rec5: 'Scranton',
-          rec6: 'San Bernardino',
+          rec6: 'San-Bernardino',
         },
         {
           id: '37',
@@ -743,7 +743,7 @@ exports.seed = function (knex) {
           rec3: 'Baltimore',
           rec4: 'Danville',
           rec5: 'Scranton',
-          rec6: 'San Bernardino',
+          rec6: 'San-Bernardino',
         },
         {
           id: '38',
